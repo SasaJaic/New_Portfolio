@@ -2,6 +2,6 @@
 This is my portfolio
 
 ## This is my work
-Krinica
-Buisnies Trip Advisor
+Krinica,
+Buisnies Trip Advisor,
 Airplane Company
