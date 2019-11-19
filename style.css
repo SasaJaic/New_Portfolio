@@ -1,4 +1,4 @@
-/*START GLOBAL*/
+/*START GLOBAL------------------------------------------------------------*/
 *{
     margin: 0;
     padding: 0;
@@ -16,7 +16,7 @@ body{
     background-size: cover;
 }
 section{
-    padding: 6rem;
+    padding: 6rem 0;
 }
 a{
     text-decoration: none;
@@ -31,7 +31,7 @@ img{
 }
 /*END GLOBAL*/
 
-/*START REUSABLE*/
+/*START REUSABLE----------------------------------------------------------*/
 .container{
     width: 90%;
     max-width: 120rem;
@@ -81,7 +81,7 @@ img{
 }
 /*END REUSABLE*/
 
-/*START HEADER*/
+/*START HEADER-------------------------------------------------------------*/
 header{
     width: 100%;
     height: 100vh;
@@ -188,7 +188,7 @@ li{
 }
 /*END HEADER*/
 
-/*START ABOUT*/
+/*START ABOUT-------------------------------------------------------------*/
 .about .container{
     display: flex;
     align-items: center;
@@ -233,7 +233,7 @@ li{
 }
 /*END ABOUT*/
 
-/*START SERVICES*/
+/*START SERVICES----------------------------------------------------------*/
 .my-skills{
     margin-top: 10rem;
     display: grid;
@@ -270,7 +270,7 @@ li{
 }
 /*END SERVICES*/
 
-/*START PORTFOLIO*/
+/*START PORTFOLIO--------------------------------------------------------*/
 .portfolio-item{
     display: flex;
     align-items: center;
@@ -310,14 +310,137 @@ li{
 }
 /*END PORTFOLIO*/
 
-/*START EXPERIENCE*/
-
+/*START EXPERIENCE------------------------------------------------------*/
+.timeline ul{
+    border-left: 4px solid #ffe838;
+    border-radius: .8rem;
+    background-color: rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+    position: relative;
+    padding: 5rem;
+    list-style: none;
+    text-align: left;
+    width: 70%;
+}
+.timeline h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    opacity: .3;
+}
+.timeline .date{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    position: relative;
+}
+.timeline .date:last-of-type{
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border: none;
+}
+.timeline .date::before,
+.timeline .date::after
+{
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.timeline .date::before{
+    content: attr(data-date);
+    left: -21rem;
+    text-align: right;
+    min-width: 12rem;
+    font-size: 1.5rem;
+}
+.timeline .date::after{
+    content: '';
+    box-shadow: 0 0 0 4px #fd57bf;
+    border-radius: 100%;
+    left: -7.9rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #313534;
+}
 /*END EXPERIENCE*/
 
-/*START CONTACT*/
-
+/*START CONTACT-----------------------------------------------------------*/
+.contact{
+    background-color: #221e3f;
+}
+form{
+    width: 70%;
+    margin: 0 auto;
+}
+form label{
+    font-size: 1.5rem;
+}
+input,
+select,
+textarea
+{
+    width: 100%;
+    padding: 1rem;
+    margin-top: 5px;
+    border: none;
+    outline-color: #fd57bf;
+}
+input[type="submit"]{
+    width: initial;
+    background-color: #fd57bf;
+    color: #eee;
+    padding: 1rem 2rem;
+    border-radius: .8rem;
+    cursor: pointer;
+    transition: background-color 650ms;
+}
+input[type="submit"]:hover{
+    color: #221e3f;
+    background-color: #ffe838;
+}
 /*END CONTACT*/
 
-/*START FOOTER*/
-
+/*START FOOTER------------------------------------------------------------*/
+.copyright{
+    width: 100%;
+    padding: 2rem 0;
+    text-align: center;
+    background-color: #16162d;
+    position: relative;
+}
+.up{
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    background-color: #eee;
+    top: -2.5rem;
+    right: 5rem;
+    border-radius: 100%;
+    display: flex;
+    animation: pulse 2s infinite;
+    cursor: pointer;
+}
+.up i{
+    color: #16162d;
+    font-size: 2rem;
+    margin: auto;
+}
+.copyright p{
+    font-size: 1.4rem;
+}
 /*END FOOTER*/
+/*START ANIMATION--------------------------------------------------------*/
+@keyframes pulse{
+    0%{
+        box-shadow: 0 0 0 0 rgba(253, 87, 191, 0.99);
+    }
+    70%{
+        box-shadow: 0 0 0 2rem rgba(253, 87, 191, 0);
+    }
+    100%{
+        box-shadow: 0 0 0 0 rgba(253, 87, 191, 0);
+    }
+}
+/*END ANIMATION*/
