@@ -7,12 +7,12 @@
 html{
     font-size: 10px;
     font-family: 'Roboto', sans-serif;
-    color: #eee;
+    color:gray;
 }
 body{
     width: 100%;
     height: 100%;
-    background: url("images/BN12os.jpg") no-repeat center fixed;
+    background: url("images/back3.jpg") no-repeat center fixed;
     background-size: cover;
 }
 section{
@@ -20,7 +20,7 @@ section{
 }
 a{
     text-decoration: none;
-    color: #eee;
+    color: gray;
 }
 p{
     font-size: 1.8rem;
@@ -45,7 +45,7 @@ img{
 }
 .section-heading h1{
     font-size: 3.5rem;
-    color: rgba(255, 255, 255, .3);
+    color: linear-gradient(to bottom, rgb(255, 123, 0), purple);
     text-transform: uppercase;
     font-weight: 300;
     position: relative;
@@ -59,7 +59,7 @@ img{
     bottom: -.5rem;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: purple;
 }
 .section-heading h1::before{
     width: 10rem;
@@ -109,15 +109,15 @@ li{
     margin: 0 2rem;
 }
 .nav-link{
-    font-family: 'Shadows Into Light', cursive;
-    /*font-family: 'Permanent Marker', cursive;*/
+    font-family: 'Courgette', cursive;
     font-size: 5rem;
     padding: 1rem;
 }
 .nav-link:hover,
 .nav-link:focus{
-    background: linear-gradient(to top, #ffe838, #fd57bf);
+    background: linear-gradient(to bottom, rgb(255, 123, 0), purple);
     background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .top-nav.open{
@@ -141,7 +141,7 @@ li{
     transform: rotate(-45deg);
 }
 .bar{
-    background: linear-gradient(to right, #ffe838, #fd57bf);
+    background: linear-gradient(to right, rgb(255, 123, 0), purple);
     width: 100%;
     height: 4px;
     border-radius: .8rem;
@@ -169,15 +169,16 @@ li{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
+    width: 50%;
     text-align: center;
     z-index: 1;
 }
 .landing-text h1{
-    font-size: 20rem;
-    font-family: 'Shadows Into Light', cursive;
-    background: linear-gradient(to top, #ffe838, #fd57bf);
+    font-size: 15rem;
+    font-family: 'Courgette', cursive;
+    background: linear-gradient(to bottom, rgb(255, 123, 0), purple);
     background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding: 1rem;
     user-select: none;
@@ -222,11 +223,11 @@ li{
     font-size: 5rem;
     transition:  color 650ms;
 }
-.fa-facebook-square:hover{
+.fa-linkedin:hover{
     color: #4267b2;
 }
-.fa-twitter-square:hover{
-    color: #38a1f3;
+.fa-github-square:hover{
+    color: black;
 }
 .fa-instagram:hover{
     color: #f56040;
@@ -256,19 +257,51 @@ li{
 .icon-container{
     width: 10rem;
     height: 10rem;
-    border: 3px solid #ffe838;
-    background-color: #fd57bf;
+    border: 3px solid rgb(255, 123, 0);
+    background-color: purple;
     margin-bottom: 2rem;
     display: flex;
     transform:  rotate(45deg);
 }
 .icon-container i{
-    color: #ffe838;
+    color: rgb(255, 123, 0);
     font-size: 5rem;
     margin: auto;
     transform: rotate(-45deg);
 }
 /*END SERVICES*/
+
+/*START TECHNOLOGY----------------------------------------------------------*/
+.my-technology{
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2rem;
+    text-align: center;
+}
+.skill{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+.technology-container{
+    width: 7rem;
+    height: 7rem;
+    border: 2px solid rgb(255, 123, 0);
+    background-color: purple;
+    margin-bottom: 2rem;
+    display: flex;
+    transform:  rotate(45deg);
+}
+.technology-container i{
+    color: rgb(255, 123, 0);
+    font-size: 3rem;
+    margin: auto;
+    transform: rotate(-45deg);
+}
+/*END TECHNOLOGY----------------------------------------------------------*/
 
 /*START PORTFOLIO--------------------------------------------------------*/
 .portfolio-item{
@@ -295,7 +328,7 @@ li{
     font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 300;
-    opacity: 0.3;
+    opacity: .7;
 }
 .portfolio-description .cta{
     display: inline-block;
@@ -308,11 +341,12 @@ li{
 .portfolio-description .cta:hover{
     color: #2f67cd;
 }
+
 /*END PORTFOLIO*/
 
 /*START EXPERIENCE------------------------------------------------------*/
 .timeline ul{
-    border-left: 4px solid #ffe838;
+    border-left: 4px solid rgb(255, 123, 0);
     border-radius: .8rem;
     background-color: rgba(0, 0, 0, 0.05);
     margin: 0 auto;
@@ -327,7 +361,7 @@ li{
     text-transform: uppercase;
     font-weight: 300;
     margin-bottom: 1rem;
-    opacity: .3;
+    opacity: .7;
 }
 .timeline .date{
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -357,12 +391,12 @@ li{
 }
 .timeline .date::after{
     content: '';
-    box-shadow: 0 0 0 4px #fd57bf;
+    box-shadow: 0 0 0 4px purple;
     border-radius: 100%;
     left: -7.9rem;
     height: 1.5rem;
     width: 1.5rem;
-    background-color: #313534;
+    background-color: black;
 }
 /*END EXPERIENCE*/
 
@@ -389,7 +423,7 @@ textarea
 }
 input[type="submit"]{
     width: initial;
-    background-color: #fd57bf;
+    background-color: rgb(255, 123, 0);
     color: #eee;
     padding: 1rem 2rem;
     border-radius: .8rem;
@@ -398,7 +432,7 @@ input[type="submit"]{
 }
 input[type="submit"]:hover{
     color: #221e3f;
-    background-color: #ffe838;
+    background-color: purple;
 }
 /*END CONTACT*/
 
@@ -480,6 +514,13 @@ input[type="submit"]:hover{
     }
     .icon-container i{
         font-size: 4rem;
+    }
+    .technology-container{
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+    .technology-container i{
+        font-size: 2rem;
     }
     .timeline ul{
         margin:  0 0 0 auto;
